@@ -14,15 +14,24 @@ const routes: Routes = [
     loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule),
     resolve: {
       list: ListResolve
+    },
+    data: {
+      title: 'Lista de usuários'
     }
   },
   {
     path: 'create',
-    loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule)
+    loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule),
+    data: {
+      title: 'Cadastrar usuário'
+    }
   },
   {
     path: 'update',
-    loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule)
+    loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule),
+    data: {
+      title: 'Atualizar dados'
+    }
   }
 ];
 

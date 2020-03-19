@@ -8,7 +8,7 @@ import { ListRoutingModule } from './list.routing';
   declarations: [ListComponent],
   imports: [
     CommonModule,
-    ListRoutingModule
+    ListRoutingModule,
   ]
 })
 export class ListModule { }

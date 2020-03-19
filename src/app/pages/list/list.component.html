@@ -1,2 +1,20 @@
-<p>list works!</p>
-<p *ngFor="let i of data">{{i.name}}</p>
+<table class="table col-9 mx-auto text-center">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Github</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of data">
+            <th scope="row">{{i.nome}}</th>
+            <td>{{i.idade}}</td>
+            <td>{{i.cargo}}</td>
+            <td><a target="_blanck" href="https://github.com/{{i.perfilGit}}"><i class="fab fa-github fa-2x"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

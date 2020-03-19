@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TitleService } from './services/title.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'crud';
+
+  constructor(
+    private _titleService: TitleService
+  ) { }
+
+  ngOnInit() {
+    this._titleService.startTrackingRouteEvent()
+  }
 }
