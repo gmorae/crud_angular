@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +10,8 @@ export class ListComponent implements OnInit {
 
   data: any
   constructor(
-    private _activatedRoute: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
+    private _router: Router
   ) { }
 
   ngOnInit(): void {
@@ -19,6 +20,10 @@ export class ListComponent implements OnInit {
 
   deleteItem =id => {
     console.log(id);
+  }
+
+  editItem =id => {
+    this._router.navigate([`/${id}/update`])
   }
 
 }

@@ -27,7 +27,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'update',
+    path: ':id/update',
     loadChildren: () => import('./pages/form/form.module').then(m => m.FormModule),
     data: {
       title: 'Atualizar dados'
