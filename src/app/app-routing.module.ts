@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ListResolve } from './resolve/user.resolve';
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule),
+    resolve: {
+      list: ListResolve
+    }
   },
   {
     path: 'create',

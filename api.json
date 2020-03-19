@@ -1,7 +1,7 @@
 {
     "users": [
         {
-            "nome": "Gabriel",
+            "name": "Gabriel",
             "idade": 18,
             "cargo": "Desenvolvedor frontend",
             "perfilGit": "gmorae"
