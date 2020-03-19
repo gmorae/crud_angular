@@ -12,9 +12,4 @@ export class TitleComponent {
   get title() {
     return this._titleService.title;
   }
-
-  ngOnInit(){
-    console.log(this.title);
-    
-  }
 }

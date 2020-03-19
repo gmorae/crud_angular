@@ -1,6 +1,7 @@
 {
     "users": [
         {
+            "id": 1,
             "nome": "Gabriel",
             "idade": 18,
             "cargo": "Desenvolvedor frontend",

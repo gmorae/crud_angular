@@ -17,4 +17,8 @@ export class ListComponent implements OnInit {
     this.data = this._activatedRoute.snapshot.data.list
   }
 
+  deleteItem =id => {
+    console.log(id);
+  }
+
 }
