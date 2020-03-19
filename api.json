@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "nome": "Gabriel",
+            "idade": 18,
+            "cargo": "Desenvolvedor frontend",
+            "perfilGit": "gmorae"
+        }
+    ]
+}
