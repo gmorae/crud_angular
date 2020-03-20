@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup
+  
+  constructor(
+    private _fb: FormBuilder,
+    private _router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.createForm()    
   }
 
+  createForm = () => {
+    this.form = this._fb.group({
+      nome: '',
+      cargo: '',
+      perfilGit: '',
+    })
+  }
+
+  onSubmit = () => {
+    console.log(this.form.value);
+    this._router.navigate(['/list'])
+  }
 }
