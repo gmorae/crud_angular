@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-form',
@@ -10,26 +11,32 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit {
 
   form: FormGroup
-  
+
   constructor(
     private _fb: FormBuilder,
-    private _router: Router
+    private _router: Router,
+    private _service: FormService
   ) { }
 
   ngOnInit() {
-    this.createForm()    
+    this.createForm()
   }
 
   createForm = () => {
     this.form = this._fb.group({
-      nome: '',
-      cargo: '',
-      perfilGit: '',
+      nome: ['', Validators.required],
+      cargo: ['', Validators.required],
+      perfilGit: ['', Validators.required],
     })
   }
 
   onSubmit = () => {
-    console.log(this.form.value);
-    this._router.navigate(['/list'])
+    if (this.form.valid) {
+      this._service.create(this.form.value)
+      this._router.navigate(['/list'])
+    } else {
+      console.log('preencha os campos');
+    }
+
   }
 }

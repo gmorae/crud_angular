@@ -1,11 +1,28 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "nome": "Gabriel",
-            "idade": 18,
-            "cargo": "Desenvolvedor frontend",
-            "perfilGit": "gmorae"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "nome": "Gabriel",
+      "cargo": "Desenvolvedor frontend",
+      "perfilGit": "gmorae"
+    },
+    {
+      "id": 2,
+      "nome": "Gabriell",
+      "cargo": "Desenvolvedor frontend",
+      "perfilGit": "gmorae"
+    },
+    {
+      "id": 3,
+      "nome": "Gabriell",
+      "cargo": "Desenvolvedor frontend",
+      "perfilGit": "gmorae"
+    },
+    {
+      "nome": "Gabriell",
+      "cargo": "Desenvolvedor frontend",
+      "perfilGit": "gmorae",
+      "id": 4
+    }
+  ]
 }

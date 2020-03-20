@@ -15,4 +15,8 @@ export class RequestService {
         return this.http.get(`${environment.apiUrl}/${url}`)
     }
 
+    postUser = (url, user) => {
+        this.http.post(`${environment.apiUrl}/${url}`, user)
+    }
+
 }
